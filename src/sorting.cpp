@@ -45,26 +45,19 @@ void quickSort(vector<__int64> &array, __int64 low, __int64 high)
 // }
 __int64 partition(vector<__int64> &array, __int64 low, __int64 high)
 {
-    __int64 pivot = array[low];
-    __int64 i = low + 1;
-    __int64 j = high;
-    while (i < j)
+    __int64 pivot = array[high];
+    __int64 i = (low - 1);
+    for (__int64 j = low; j <= high - 1; j++)
     {
-        while (array[i] < pivot)
+
+        if (array[j] < pivot)
         {
             i++;
-        }
-        while (array[j] > pivot)
-        {
-            j--;
-        }
-        if (i < j)
-        {
             swapElement(array, i, j);
         }
     }
-    swapElement(array, j, low);
-    return j;
+    swapElement(array, i + 1, high);
+    return (i + 1);
 }
 // swapElement the element in the given positions
 void swapElement(vector<__int64> &array, __int64 firstPosi, __int64 secondPosi)
