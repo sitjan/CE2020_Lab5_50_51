@@ -66,3 +66,16 @@ void randomArrary(int *array, int size)
 
     random_shuffle(array, array + size - 1);
 }
+
+void insertionsort(int* array){
+    int length = sizeof(array);
+    for(j=1; j<length-1; j++){
+        int key = array [j];
+        int i= j-1;
+        while (i>=0 && array[i]>key){
+            array[i+1]= array[i];
+            i=i-1;
+        }
+        array[i+1] = key;
+    }
+}
