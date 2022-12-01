@@ -7,10 +7,8 @@ using namespace std;
 
 
 //Function declaration for quick sort
-void quickSort(int* array,int low , int high );
-// For partition of arrat according to the pivot element
-int partition(int * array ,int low, int high);
-void swapElement (int * array , int firstPosi, int secondPosi);
- void  randomArrary (int * array,int size);
+__int64 partition(vector<__int64> &array, __int64 low, __int64 high);
+void swapElement(vector<__int64> &array, __int64 firstPosi, __int64 secondPosi);
+void randomArrary(vector<__int64> &array, __int64 size);
 
 #endif
