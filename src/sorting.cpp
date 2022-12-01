@@ -85,3 +85,16 @@ void randomArrary(vector<__int64> &array, __int64 size)
 
     shuffle(array.begin(), array.end(), g);
 }
+
+void insertionsort(vector<__int64> &array){
+    
+    for(int j=1; j<array.size()-1; j++){
+        int key = array [j];
+        int i= j-1;
+        while (i>=0 && array[i]>key){
+            array[i+1]= array[i];
+            i=i-1;
+        }
+        array[i+1] = key;
+    }
+}
